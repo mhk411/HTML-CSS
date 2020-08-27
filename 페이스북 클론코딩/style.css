@@ -1,3 +1,14 @@
+:root{
+  --grey-color:#f2f2f2;
+  --blue-color:#0066ff;
+  --green-color:#00b300;
+
+  --font-size-large:60px;
+  --font-size-regular:28px;
+  --font-size-medium:20px;
+  --font-size-small:15px;
+}
+
 *{
   margin:0;
   padding:0;
@@ -6,81 +17,78 @@
 
 body{
   font-family: Roboto;
-  background-color: #f2f2f2;
+  background-color: var(--grey-color);
 }
 
-
-.main{
+.login-page{
   display: flex;
   position: absolute;
-  align-items: center;
-  top:150px;
+  top:200px;
   left:250px;
 }
 
-.main .logo h1{
-  font-size:60px;
-  color:#0066ff;
+.login-page .logo{
+  margin-right: 70px;
+}
+.login-page .logo h1{
+  color:var(--blue-color);
+  font-size:var(--font-size-large);
 }
 
-.main .logo{
-  width: 100%;
-  font-size:28px;
-  padding-right: 70px;
-
+.login-page .logo p{
+  font-size:var(--font-size-regular);
 }
 
-.main .info{
-display: flex;
-flex-direction: column;
-padding:20px 12px;
-background-color: white;
-outline: none;
-border-radius: 10px;
-align-items: center;
 
-}
-
-.main .info .login input{
-  width: 350px;
-  height: 50px;
-  border-radius: 4px;
-  border:1px solid #f2f2f2;
-  margin-bottom: 10px;
-}
-
-.main .info .login .submit input{
-  background-color: #0066ff;
-  color:white;
-  font-weight: bold;
-  font-size:20px;
-}
-
-.main .info .login input::placeholder{
-  color:#999999;
-}
-
-.main .info .forgetAndcreate{
+.login-page .login form{
+  position: absolute;
+  top:-50px;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding:12px 12px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 5px #e6e6e6;
 }
 
-.main .info .forgetAndcreate > span{
-  margin-bottom: 15px;
-  color:#0066ff;
-  border-bottom: 1px solid black;
+.login-page .login form input{
+  border:1px solid #d9d9d9;
+  border-radius: 5px;
+  width:360px;
+  height:60px;
+  margin-bottom: 12px;
+  padding-left: 7px;
 }
-.main .info .forgetAndcreate button{
-  background-color: #00b300;
-  border-radius: 4px;
-  border:none;
-  width:150px;
-  height: 50px;
 
-}
-.main .info .forgetAndcreate button span{
+.login-page .login .loginBtn{
+  width:360px;
+  height:50px;
+  background-color: var(--blue-color);
   color:white;
-  font-size:20px;
+  border:none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size:var(--font-size-medium);
+  margin-bottom:12px;
+}
 
+.login-page .login p{
+  text-align: center;
+  color:var(--blue-color);
+  font-size:var(--font-size-small);
+  margin-bottom: 16px;
+}
 
+.login-page .login .newCreate{
+  background-color: var(--green-color);
+  border:none;
+  border-radius: 5px;
+  width:140px;
+  height:50px;
+  color:white;
+  font-size:16px;
+  font-weight: bold;
+  position: relative;
+  left:110px;
+  margin-top:16px;
 }
